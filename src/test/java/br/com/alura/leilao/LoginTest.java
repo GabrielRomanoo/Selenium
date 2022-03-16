@@ -68,4 +68,17 @@ public class LoginTest {
 		//verifica se o nome do usuario logado esta vazio
 		Assert.assertThrows(NoSuchElementException.class, () -> browser.findElement(By.id("usuario-logado")).getText().equals(""));
 	}
+	
+	@Test
+	public void naoDeveriaAcessarPaginaRestritaSemEstarLogado() {
+		//tenta acessar uma pagina de um leilao
+		this.browser.navigate().to("http://localhost:8080/leiloes/2");
+		
+		//verifica se voltou pra pagina de login
+		Assert.assertTrue(browser.getCurrentUrl().equals(urlLogin));
+		
+		//verifica se nao tem o titulo de dados do leilao na pagina atual
+		Assert.assertFalse(browser.getPageSource().contains("Dados do Leilão"));
+	}
+	
 }
