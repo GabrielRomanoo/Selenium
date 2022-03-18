@@ -1,11 +1,9 @@
-package br.com.alura.leilao;
+package br.com.alura.leilao.login;
 
 import org.junit.Assert;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import br.com.alura.leilao.login.LoginPage;
 
 public class LoginTest {
 	
