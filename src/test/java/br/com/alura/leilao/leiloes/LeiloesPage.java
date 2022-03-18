@@ -29,8 +29,8 @@ public class LeiloesPage {
 		WebElement colunaDataAbertura = linhaTabela.findElement(By.cssSelector("td:nth-child(2)"));
 		WebElement colunaValorInicial = linhaTabela.findElement(By.cssSelector("td:nth-child(3)"));
 		
-		return colunaNome.getText().equals("nome")
-				&& colunaDataAbertura.getText().equals(colunaDataAbertura)
-				&& colunaValorInicial.getText().equals(colunaValorInicial); 
+		return colunaNome.getText().equals(nome)
+				&& colunaDataAbertura.getText().equals(dataAbertura)
+				&& colunaValorInicial.getText().equals(valorInicial); 
 	}
 }

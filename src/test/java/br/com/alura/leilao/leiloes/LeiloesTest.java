@@ -28,8 +28,8 @@ public class LeiloesTest {
 		CadastroLeilaoPage paginaDeCadastroDeLeiloes = paginaDeLeiloes.carregaFormulario();
 		
 		String hoje = LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
-		String nome = "Lance do dia" + hoje;
-		BigDecimal valorInicial = new BigDecimal("500.0");
+		String nome = "Lance do dia " + hoje;
+		BigDecimal valorInicial = new BigDecimal("500.00");
 		
 		this.paginaDeLeiloes = paginaDeCadastroDeLeiloes.cadastrarLeilao(nome, valorInicial.toString(), hoje);
 		Assert.assertTrue(paginaDeLeiloes.isLeilaoCadastrado(nome, valorInicial.toString(), hoje));
