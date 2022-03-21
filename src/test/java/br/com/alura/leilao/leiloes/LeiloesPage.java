@@ -4,13 +4,14 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class LeiloesPage {
+import br.com.alura.leilao.PageObject;
+
+public class LeiloesPage extends PageObject {
 
 	private String urlCadastroLeiloes = "http://localhost:8080/leiloes/new" ;
-	private WebDriver browser;
 	
 	public LeiloesPage(WebDriver browser) {
-		this.browser = browser;
+		super(browser);
 	}
 
 	public void fechar() {
