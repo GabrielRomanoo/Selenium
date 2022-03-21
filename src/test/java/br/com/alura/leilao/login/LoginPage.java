@@ -17,10 +17,11 @@ public class LoginPage extends PageObject {
 		this.browser.navigate().to(urlLogin);
 	}
 
-	public void preencheFormularioDeLogin(String string, String string2) {
+	public LoginPage preencheFormularioDeLogin(String string, String string2) {
 		//digita o usuario e senha
 		browser.findElement(By.id("username")).sendKeys(string);
 		browser.findElement(By.id("password")).sendKeys(string2);
+		return this;
 	}
 
 	public LeiloesPage submeteFormualrioDeLogin() {

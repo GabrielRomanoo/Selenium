@@ -33,8 +33,8 @@ public class LoginTest {
 
 	@Test
 	public void naoDeveriaLogarComDadosInvalidos() { 
-		paginaDeLogin.preencheFormularioDeLogin("invalido", "pass");
-		paginaDeLogin.submeteFormualrioDeLogin();
+		//chamada encadeada
+		paginaDeLogin.preencheFormularioDeLogin("invalido", "pass").submeteFormualrioDeLogin();
 		
 		//verifica se a url atual eh a tela de login com erro
 		Assert.assertTrue(paginaDeLogin.isPaginaDeLoginComDadosInvalidos());
